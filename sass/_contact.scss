@@ -1,0 +1,140 @@
+//contact
+
+.b-contactbox {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: $padding__size--small;
+  min-height: 100vh;
+  background-color: $color__green;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 48vw;
+    height:34vw;
+    top:0;
+    bottom:0;
+    margin:auto;
+    border:0.5vw solid $color__green--mint;
+  }
+}
+
+.contactbox__inner {
+  text-align: center;
+}
+
+.contactbox__header {
+  padding: 3vw;
+  font-size: 6.8vw;
+  letter-spacing:1px;
+  color: $color__yellow--mustard;
+  text-shadow: 0.2px 0.2px 3px rgba(0,0,0,0.2);
+  z-index:5;
+}
+
+.contactbox__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.contactbox__item {
+  padding: 3vw;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  text-shadow: 0.2px 0.2px 3px rgba(0,0,0,0.2);
+}
+
+.contactbox__item__inner {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: $color__yellow--mustard;
+  transition: color 350ms;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:110px;
+    height:110px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    border: 6px solid rgba(0,0,0,0.15);
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+    border-width: 6px;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color__white;
+
+    &::before,
+    &::after {
+      opacity:1;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+  }
+}
+
+@keyframes bounce-up-down {
+  0% {transform: translateY(0px);}
+  50% {transform:translateY(-50px);}
+  75% {transform:translateY(20px);}
+  100% {transform:translateY(0px);}
+}
+
+.b-icon {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+}
+
+.icon--position-middle-bottom {
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.icon--arrow-up--fill {
+  fill: $color__green--mint;
+  transition: fill 1s;
+}
+
+.icon__link--arrow-up {
+  display: block;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    animation: bounce-up-down 0.75s cubic-bezier(.61,.04,.47,.91);
+    animation-delay: 0.1s;
+  }
+
+  &:hover .icon--arrow-up--fill,
+  &:focus .icon--arrow-up--fill {
+    fill: $color__green--dark;
+  }
+}
+

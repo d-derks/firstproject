@@ -1,0 +1,39 @@
+// Layout
+
+html {
+  font-family: $font-family--standard;
+  font-size: 62.5%;
+  line-height: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+.l-outerwrapper {
+    width: 100%;
+    background-color: $color__beige - 50;
+}
+
+// Utility classes
+
+.is-size-50 {
+  width: 50%;
+}
+
+.l-column-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-column-4 {
+    display: flex;
+    flex-wrap: wrap;
+    width:33.33%;
+}

@@ -1,0 +1,131 @@
+// main
+
+.l-intro::before {
+  @include before-after;
+  width: 101%;
+  top: 0;
+  left: 0;
+  margin: -4% 0 0;
+  height: 0;
+  padding-top: 8%;
+  background-color: $color__green--dark;
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+
+.l-intro {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color__green--dark;
+  padding: $padding__size--small;
+  z-index:7;
+
+  .icon__link--arrow-up:hover .icon--arrow-up--fill,
+  .icon__link--arrow-up:focus .icon--arrow-up--fill {
+    fill: $color__yellow--light;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-intro {
+  min-height: 30rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .l-intro {
+    min-height: 20rem;
+  }
+}
+
+.b-textbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.textbox__inner {
+  padding: $padding__size--thicker;
+  line-height:$lineheight__size--standard;
+  margin: auto 0;
+  text-align: center;
+  width: 80%;
+}
+
+.textbox__header {
+  font-size: $font-size__header;
+  color:$color__green--mint;
+  padding:$padding__size--standard;
+  perspective: 800px;
+
+  span {
+    animation: flipUp 2s cubic-bezier(0.68, -0.55, 0.26, 1.55) both;
+    transform-origin: 50% 70%;
+    display: inline-block;
+  }
+  span:nth-child(2) {
+    animation-delay: 0.2s
+  }
+
+  span:nth-child(3) {
+    animation-delay: 0.4s
+  }
+}
+
+@keyframes flipUp {
+  from {transform: rotateX(90deg);}
+  to {transform: rotateX(0deg);}
+}
+
+@-webkit-keyframes flipUp {
+  from {transform: rotateX(90deg);}
+  to {transform: rotateX(0deg);}
+}
+
+.textbox__text {
+  margin-bottom: 3rem;
+  font-size: $font-size--copytext;
+  padding: $padding__size--standard;
+  color: $color__beige;
+}
+
+.l-skills {
+  min-height:100vw;
+  background-color: $color__red--dark;
+  width: 100%;
+}
+
+//teasers
+
+.l-teaserwrapper {
+  display: flex;
+  min-height: 30vw;
+}
+
+.b-teaser {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 100%;
+  padding: $padding__size--standard;
+}
+
+.teaser__link {
+  display: block;
+}
+
+.b-mediabox {
+  width: 100%;
+  height: 25vh;
+}
+
+.mediabox__img {
+  max-width: 100%;
+  min-width:100%;
+  max-height: 100%;
+  animation: spin 2s ease-in infinite;
+}

@@ -1,0 +1,31 @@
+
+@mixin backImage ($image) {
+  background: url($image);
+  background-repeat: no-repeat;
+}
+
+@mixin pageheader {
+  display: block;
+  font-family: $standard-font;
+  font-size: $font-size-main-header;
+  padding: $padding-size-fat;
+}
+
+@mixin navList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $padding-size-smalling;
+}
+
+@mixin linkreset {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin before-after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+

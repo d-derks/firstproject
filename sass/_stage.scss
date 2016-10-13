@@ -1,0 +1,226 @@
+// stage
+
+.b-parallax {
+    perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+//main nav
+
+.b-mainnav {
+    position: relative;
+    right: 0;
+    padding: $padding__size--small;
+}
+
+.mainnav__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $padding__size--small;
+    justify-content: flex-end;
+}
+
+.mainnav__item {
+    margin: 0 1rem;
+    list-style-type: none;
+    font-size: $font-size__copytext;
+    text-transform: uppercase;
+}
+
+.mainnav__item__inner {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: $padding__size--standard;
+    color: $color__black;
+    transition: color 300ms ease-out;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        height: 2px;
+        opacity: 0;
+        background-color: $color__white;
+        transition: opacity 400ms, transform 300ms;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color__white;
+
+        &::before {
+            top: 0;
+            transform: translateY(-8px);
+            opacity: 1;
+        }
+
+        &::after {
+            bottom: 0;
+            transform: translateY(8px);
+            opacity: 1;
+        }
+    }
+
+
+}
+
+.parallax__group {
+    position: relative;
+    height: 90vh;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+@media (max-width: 768px) {
+    .parallax__group {
+        height: 75vh;
+    }
+
+}
+
+@media (max-width: 415px) {
+    .parallax__group {
+        height: 60vh;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .parallax__group {
+        height: 50vh;
+    }
+
+}
+
+.parallax__layer {
+    position: absolute;
+}
+
+//parallax base
+
+.parallax__layer--base {
+    margin: auto 0;
+    display: flex;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transform: translateZ(0);
+    z-index: 5;
+}
+
+.b-pageheaderbox {
+    width: 100%;
+    margin: auto 0 50%;
+    text-align: center;
+
+}
+
+.pageheaderbox__title {
+    display: block;
+    font-family: $font-family--standard;
+    font-size: $font-size__main-header;
+    padding: $padding__size--small;
+    color: #fff;
+    text-shadow: 0.2px 0.2px 2px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.pageheaderbox__title--font-changed {
+    font-size: $font-size__main-header--small;
+    font-weight: 300;
+    color: $color__black;
+}
+
+.pageheaderbox__intro {
+    font-size: $font-size__copytext--big;
+    padding:$padding__size--standard;
+}
+
+// parallax depth layers
+
+.parallax__layer--deep1 {
+    transform: translateZ(-37px) scale(0.75) rotate(5deg);
+    z-index: 6;
+    top: 25vh;
+    right:10vw;
+    width: 15vw;
+    height: 15vw;
+    border: solid 0.4vw $color__white;
+}
+
+.parallax__layer--deep2 {
+    transform: translateZ(-75px) scale(1) rotate(50deg);
+    z-index: 5;
+    width: 10vw;
+    height: 10vw;
+    bottom: 10vh;
+    right: 60vw;
+    background-color: $color__yellow--mustard;
+    box-shadow: 0.2px 0.2px 2px rgba(0,0,0,0.2);
+}
+
+.parallax__layer--deep3 {
+    transform: translateZ(-112px) scale(1.25) rotate(45deg);
+    z-index: 4;
+    bottom: 10vh;
+    right: 24vw;
+    width: 15vw;
+    height: 15vw;
+    background-color: $color__beige--dark;
+
+}
+
+.parallax__layer--deep4 {
+    transform: translateZ(-150px) scale(1.5) rotate(117deg);
+    z-index: 3;
+    bottom: 30vh;
+    left: -6vw;
+    width: 13vw;
+    height: 13vw;
+    border: solid 4px $color__green--mint;
+}
+
+.parallax__layer--deep5 {
+    transform: translateZ(-225px) scale(1.75) rotate(10deg);
+    z-index: 2;
+    width: 22vw;
+    height: 22vw;
+    top: -10vh;
+    left: 28vw;
+    background-color:$color__green--mint;
+    box-shadow: 0.2px 0.2px 2px rgba(0,0,0,0.6);
+}
+
+.parallax__layer--deep6 {
+    transform: translateZ(-262px) scale(1.875) rotate(15deg);
+    z-index: 1;
+    top: -5vh;
+    left: 100vw;
+    width: 8vw;
+    height: 8vw;
+    background-color: $color__red;
+    border-radius: 50%;
+}
+
+.parallax__layer--back {
+    transform: translateZ(-300px) scale(2) rotate(52deg);
+    z-index: 0;
+    top: -30vh;
+    left: -20vw;
+    width: 15vw;
+    height: 15vw;
+    background: $color__anthracite;
+}
+
+
+
+

@@ -1,0 +1,57 @@
+// basics
+
+$font-family--standard: 'Josefin Sans', sans-serif;
+$font-family--special: 'comfortaa';
+
+$font-size__copytext: 1.6vw;
+$font-size__copytext--big: 2vw;
+$font-size__header: 3.4vw;
+$font-size__main-header: 21vw;
+$font-size__main-header--small: 13vw;
+
+$lineheight__size--standard:1.5;
+
+$padding__size--small: 0.5vw;
+$padding__size--standard: 1vw;
+$padding__size--thicker: 1.5vw;
+$padding__size--fat: 2vw;
+
+//colors
+
+$color__white: #fff;
+$color__black: #000;
+$color__anthracite: #3c3c3c;
+$color__beige--dark: #c7c1b7;
+$color__beige: #d8d2c6;
+$color__yellow--light: #f3ead7;
+$color__yellow__mustard: #fad41b;
+$color__red: #cc2c12;
+$color__red--dark: #953127;
+$color__green--mint: #a3bca2;
+$color__green--dark:#2a3834;
+$color__green: #026e60;
+
+@import "normalize";
+@import "mixins";
+@import "layout";
+@import "stage";
+@import "main";
+@import "contact";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
